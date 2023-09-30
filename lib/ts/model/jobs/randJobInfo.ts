@@ -1,4 +1,4 @@
-import {JobInfo, JobSalaryPaymentMethod, JobForm} from "@/model/jobs/JobInfo";
+import {JobInfo, JobSalaryPaymentMethod, JobForm} from "./JobInfo";
 
 // This function is used to generate a random JobInfo object.
 // It is used to test the store.

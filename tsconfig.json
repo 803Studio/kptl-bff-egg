@@ -16,9 +16,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "paths": {
-      "@/*": ["./lib/ts/*"]
-    }
+    "allowSyntheticDefaultImports": true
   }
 }

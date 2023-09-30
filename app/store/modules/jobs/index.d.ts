@@ -1,6 +1,6 @@
-import type { StoreModule } from "@/store/type";
-import { JobInfo } from "@/model/jobs/JobInfo";
-import { StoreIndexes } from "@/store/utils";
+import type { StoreModule } from "../../type";
+import { JobInfo } from "../../../model/jobs/JobInfo";
+import { StoreIndexes } from "../../utils";
 interface JobStore extends StoreModule {
     indexes: StoreIndexes<JobInfo>;
 }

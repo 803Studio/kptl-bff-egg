@@ -1,6 +1,6 @@
 import { opendir } from 'node:fs/promises'
 import * as path from 'node:path'
-import { StoreModule } from "@/store/type";
+import { StoreModule } from "./type";
 import {EggLogger} from "egg";
 
 export async function init(loggerGetter: () => EggLogger) {

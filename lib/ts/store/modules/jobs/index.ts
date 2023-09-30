@@ -1,7 +1,7 @@
-import type {StoreModule} from "@/store/type";
-import {JobInfo} from "@/model/jobs/JobInfo";
-import {createStoreIndexes, StoreIndexes} from "@/store/utils";
-import {randJobInfo} from "@/model/jobs/randJobInfo";
+import type {StoreModule} from "../../type";
+import {JobInfo} from "../../../model/jobs/JobInfo"
+import {createStoreIndexes, StoreIndexes} from "../../utils"
+import {randJobInfo} from "../../../model/jobs/randJobInfo";
 
 interface JobStore extends StoreModule {
   indexes: StoreIndexes<JobInfo>

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = require("@/store/utils");
-const randJobInfo_1 = require("@/model/jobs/randJobInfo");
+const utils_1 = require("../../utils");
+const randJobInfo_1 = require("../../../model/jobs/randJobInfo");
 const jobStoreIndexes = (0, utils_1.createStoreIndexes)([
     'id',
     'companyId',

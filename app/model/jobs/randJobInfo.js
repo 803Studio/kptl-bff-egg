@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.randJobInfo = void 0;
-const JobInfo_1 = require("@/model/jobs/JobInfo");
+const JobInfo_1 = require("./JobInfo");
 // This function is used to generate a random JobInfo object.
 // It is used to test the store.
 // there are some rules of generation:

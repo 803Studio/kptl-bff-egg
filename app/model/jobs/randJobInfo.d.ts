@@ -1,2 +1,2 @@
-import { JobInfo } from "@/model/jobs/JobInfo";
+import { JobInfo } from "./JobInfo";
 export declare function randJobInfo(): JobInfo;
