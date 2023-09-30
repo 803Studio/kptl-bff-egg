@@ -1,0 +1,26 @@
+{
+  "name": "kptl-bff-egg",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "tsc": "node cleanTsLib.js && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.3",
+    "egg": "^3.17.4",
+    "google-protobuf": "^3.21.2",
+    "kptl-grpc-js": "github:803Studio/kptl-grpc-js#v0.1.0"
+  },
+  "devDependencies": {
+    "@types/google-protobuf": "^3.15.7",
+    "@types/node": "^20.7.0",
+    "egg-bin": "^6.5.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
