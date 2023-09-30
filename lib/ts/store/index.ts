@@ -6,21 +6,29 @@ import {EggLogger} from "egg";
 export async function init(loggerGetter: () => EggLogger) {
   const modules: StoreModule[] = []
   const logger = loggerGetter()
+  const info = (s: string) => logger.info(`[store] ${s}`)
 
   const dir = await opendir(path.join(__dirname, 'modules'))
   for await (const dirent of dir) {
     if (dirent.isDirectory()) {
-      modules.push(require(dirent.path).default)
+      info(`Loading store module ${dirent.name}`)
+      try {
+        const module = require(dirent.path)
+        modules.push(module.default)
+        info(`Loaded store module ${dirent.name}`)
+      } catch (e) {
+        logger.error(`Failed to load store module ${dirent.name}: ${e}`)
+      }
     }
   }
 
   let root = Promise.resolve()
 
   for (const module of modules) {
-    logger.info(`Initializing store module ${module.name}`)
+    info(`Initializing store module ${module.name}`)
     root = root.then(() => module.init())
       .then(() => {
-        logger.info(`Initialized store module ${module.name}`)
+        info(`Initialized store module ${module.name}`)
       })
       .catch(reason => {
         logger.error(`Failed to initialize store module ${module.name}: ${reason}`)
